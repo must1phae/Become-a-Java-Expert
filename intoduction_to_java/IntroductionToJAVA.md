@@ -88,3 +88,44 @@ flowchart LR
     style D fill:#039be5,stroke:#58a6ff,stroke-width:1px,color:#fff
     style E fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff
     
+## 🖥️ JVM Internal Architecture (Detailed)
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': {
+  'primaryColor': '#1f6feb',
+  'edgeLabelBackground':'#ffffff',
+  'fontSize': '14px',
+  'lineColor': '#58a6ff',
+  'primaryTextColor': '#ffffff',
+  'tertiaryColor': '#161b22',
+  'background': '#0d1117'
+}}}%%
+
+flowchart TD
+    A["⚙️ JVM"]
+    B["🗂️ Method Area<br/>(Class info, constants)"]
+    C["📦 Heap<br/>(Objects)"]
+    D["🧵 Stack<br/>(Local variables & method calls)"]
+    E["🔄 Garbage Collector"]
+    F["💻 Native Method Stack<br/>(JNI)"]
+    G["📝 Execution Flow"]
+
+    %% Connections
+    A --> B
+    A --> C
+    A --> D
+    D --> C
+    C --> E
+    A --> F
+    D --> G
+    F --> G
+    B --> G
+    C --> G
+
+    %% Styles
+    style A fill:#039be5,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style B fill:#7e57c2,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style C fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style D fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
+    style E fill:#e53935,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style F fill:#ff7043,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style G fill:#6d4c41,stroke:#58a6ff,stroke-width:1px,color:#fff
