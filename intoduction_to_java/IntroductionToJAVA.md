@@ -56,6 +56,9 @@ Java is designed for network-based applications and remote object communication.
 
 🧩 **In summary:**  
 Java is **Simple**, **Robust**, **Secure**, **Portable**, **Multi-threaded**, **Dynamic**, and **Distributed** — a true all-rounder programming language 💪
+
+---
+## ⚙️ Java Architecture
 ```mermaid
 %%{init: {'theme': 'neutral', 'themeVariables': {
   'primaryColor': '#1f6feb',
