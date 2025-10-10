@@ -57,10 +57,20 @@ Java is designed for network-based applications and remote object communication.
 🧩 **In summary:**  
 Java is **Simple**, **Robust**, **Secure**, **Portable**, **Multi-threaded**, **Dynamic**, and **Distributed** — a true all-rounder programming language 💪
 
+%%{init: {'theme': 'neutral', 'themeVariables': {
+  'primaryColor': '#1f6feb',
+  'edgeLabelBackground':'#ffffff',
+  'fontSize': '14px',
+  'lineColor': '#58a6ff',
+  'primaryTextColor': '#ffffff',
+  'tertiaryColor': '#161b22',
+  'background': '#0d1117'
+}}}%%
+
 flowchart LR
-    A["📄 Fichier.java<br/>(Source Code)"]
+    A["📄 File.java<br/>(Source Code)"]
     B["🧩 JAVAC<br/>(Compiler)"]
-    C["📦 Fichier.class<br/>(Bytecode)"]
+    C["📦 File.class<br/>(Bytecode)"]
     D["⚙️ JVM<br/>(Java Virtual Machine)"]
     E["💻 Hardware / OS<br/>(Binary Code 1001000101)"]
 
@@ -69,8 +79,8 @@ flowchart LR
     C -->|Executed by| D
     D -->|Runs on| E
 
-    style A fill:#f5f5f5,stroke:#000,stroke-width:1px,color:#000
-    style B fill:#ffce54,stroke:#000,stroke-width:1px,color:#000
-    style C fill:#ac92ec,stroke:#000,stroke-width:1px,color:#fff
-    style D fill:#4fc1e9,stroke:#000,stroke-width:1px,color:#000
-    style E fill:#a0d468,stroke:#000,stroke-width:1px,color:#000
+    style A fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#ffffff
+    style B fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
+    style C fill:#7e57c2,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style D fill:#039be5,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style E fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff
