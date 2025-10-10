@@ -145,7 +145,32 @@ flowchart TD
 
 The **Java Platform** is composed of several key components that work together to **develop**, **compile**, and **execute** Java applications.  
 It consists mainly of **JDK**, **JRE**, **JVM**, **API**, and **JDT**.
+---
 
+### ⚙️ Main Components
+
+- **🧠 JVM (Java Virtual Machine)**  
+  Translates the compiled **Bytecode** into **machine code** for your computer (host machine).  
+  → Responsible for **execution** of Java programs.
+
+- **🟢 JRE (Java Runtime Environment)**  
+  Includes the **JVM** and essential **Java libraries (APIs)** to run applications.  
+  → Used for **running** Java programs, not developing them.
+
+- **📚 API (Application Programming Interface)**  
+  A large collection of ready-to-use **classes and packages** (e.g., `java.util`, `java.io`).  
+  → Helps developers use prebuilt tools instead of rewriting code.
+
+- **🟣 JDK (Java Development Kit)**  
+  The full toolkit that includes **JRE** + **development tools** like the **compiler (javac)**.  
+  → Used for **writing, compiling, and debugging** Java programs.
+
+- **🧰 JDT (Java Development Tools)**  
+  A set of utilities provided for **development** (compiler, debugger, etc.).  
+  → Helps programmers transform source code into **Bytecode (.class)** files.
+
+---
+### 🧭 Relationship Between Components
 ```mermaid
 %%{init: {'theme': 'neutral', 'themeVariables': {
   'primaryColor': '#1f6feb',
