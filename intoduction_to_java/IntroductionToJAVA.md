@@ -91,6 +91,13 @@ flowchart LR
  ---
    
 ## 🖥️ JVM Internal Architecture (Detailed)
+- **JVM (Java Virtual Machine)**: The runtime environment that executes Java bytecode.  
+- **Method Area**: Stores class definitions, method information, and constants.  
+- **Heap**: Memory area where objects are stored.  
+- **Stack**: Holds local variables and method call frames.  
+- **Garbage Collector (GC)**: Automatically frees memory of objects no longer in use.  
+- **Native Method Stack (JNI)**: Executes native code called from Java.  
+- **Execution Flow**: Shows how the JVM components interact to execute a program.
 ```mermaid
 %%{init: {'theme': 'neutral', 'themeVariables': {
   'primaryColor': '#1f6feb',
