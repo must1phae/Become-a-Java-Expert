@@ -56,3 +56,21 @@ Java is designed for network-based applications and remote object communication.
 
 🧩 **In summary:**  
 Java is **Simple**, **Robust**, **Secure**, **Portable**, **Multi-threaded**, **Dynamic**, and **Distributed** — a true all-rounder programming language 💪
+
+flowchart LR
+    A["📄 Fichier.java<br/>(Source Code)"]
+    B["🧩 JAVAC<br/>(Compiler)"]
+    C["📦 Fichier.class<br/>(Bytecode)"]
+    D["⚙️ JVM<br/>(Java Virtual Machine)"]
+    E["💻 Hardware / OS<br/>(Binary Code 1001000101)"]
+
+    A -->|Compilation| B
+    B -->|Generates| C
+    C -->|Executed by| D
+    D -->|Runs on| E
+
+    style A fill:#f5f5f5,stroke:#000,stroke-width:1px,color:#000
+    style B fill:#ffce54,stroke:#000,stroke-width:1px,color:#000
+    style C fill:#ac92ec,stroke:#000,stroke-width:1px,color:#fff
+    style D fill:#4fc1e9,stroke:#000,stroke-width:1px,color:#000
+    style E fill:#a0d468,stroke:#000,stroke-width:1px,color:#000
