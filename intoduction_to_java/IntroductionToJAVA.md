@@ -80,13 +80,15 @@ flowchart LR
     A -->|Compilation| B
     B -->|Generates| C
     C -->|Executed by| D
-    D -->|Runs on| E
-```
+    D -->|Runs on| E   
+    
     style A fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#ffffff
     style B fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
     style C fill:#7e57c2,stroke:#58a6ff,stroke-width:1px,color:#fff
     style D fill:#039be5,stroke:#58a6ff,stroke-width:1px,color:#fff
     style E fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff 
+```
+ ---
    
 ## 🖥️ JVM Internal Architecture (Detailed)
 ```mermaid
