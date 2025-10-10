@@ -89,7 +89,7 @@ flowchart LR
     style E fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff
     
 ## 🖥️ JVM Internal Architecture (Detailed)
-```mermaid
+
 %%{init: {'theme': 'neutral', 'themeVariables': {
   'primaryColor': '#1f6feb',
   'edgeLabelBackground':'#ffffff',
