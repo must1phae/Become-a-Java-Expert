@@ -154,7 +154,9 @@ class Rectangle {
     }
 }
 ```
-```mermaid 
+
+```mermaid
+
 %%{init: {'theme': 'neutral', 'themeVariables': {
   'primaryColor': '#1f6feb',
   'edgeLabelBackground':'#ffffff',
