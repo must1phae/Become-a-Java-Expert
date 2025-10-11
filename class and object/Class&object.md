@@ -171,7 +171,7 @@ flowchart TD
     A[Class] --> B[Attributes]
     A --> C[Methods]
     A --> D[Constructor]
-    D -->|Creates| E[Object (Instance)]
+    D -->|Creates| E[Object<br>Instance]
     E -->|Uses| B
     E -->|Calls| C
     E -.-> F[Garbage Collector: destroys the object when unused]
