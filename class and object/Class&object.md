@@ -154,6 +154,7 @@ class Rectangle {
     }
 }
 ```
+---
 ### ✨ Summary
 
 >A **class** defines structure and behavior.
