@@ -154,7 +154,15 @@ class Rectangle {
     }
 }
 ```
+### ✨ Summary
 
+A class defines structure and behavior.
+
+An object is an instance of that class.
+
+The constructor initializes the object.
+
+The garbage collector automatically destroys it when no longer used.
 ```mermaid
 
 %%{init: {'theme': 'neutral', 'themeVariables': {
@@ -182,3 +190,4 @@ flowchart TD
     style D fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
     style E fill:#ff7043,stroke:#58a6ff,stroke-width:1px,color:#fff
     style F fill:#e53935,stroke:#58a6ff,stroke-width:1px,color:#fff
+```
