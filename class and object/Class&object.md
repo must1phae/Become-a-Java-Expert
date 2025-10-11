@@ -73,3 +73,57 @@ class Rectangle {
 }
 
 style Rectangle fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#fff
+```
+# 🔒 Access Modifiers (Encapsulation)
+
+
+| Access Level | Symbol | Description |
+|--------------|--------|-------------|
+| **private**   | `-`   | Accessible only within the same class |
+| **protected** | `#`   | Accessible in the class and its subclasses |
+| **public**    | `+`   | Accessible from anywhere |
+| **default**   | _(none)_ | Accessible within the same package |
+
+---
+
+# 🏗️ Class Constructor
+
+A **constructor** is a special method:
+
+- It is **automatically called** when an object is created.
+- It helps **initialize the attributes** of the class.
+
+### 🧩 Constructor Rules
+
+- It has the **same name** as the class.
+- It has **no return type**.
+- A class can have **multiple constructors** (overloading).
+- If no constructor is defined, Java provides a **default one**.
+
+### 🧮 Example
+
+```java
+class Rectangle {
+    double width;
+    double height;
+
+    // Default constructor
+    public Rectangle() {
+        width = 1.0;
+        height = 1.0;
+    }
+
+    // Parameterized constructor
+    public Rectangle(double w, double h) {
+        width = w;
+        height = h;
+    }
+
+    double surface() {
+        return width * height;
+    }
+}
+
+// Object creation
+Rectangle R1 = new Rectangle();          // Default constructor
+Rectangle R2 = new Rectangle(4.1, 7.3); // Parameterized constructor
