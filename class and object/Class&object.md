@@ -156,13 +156,13 @@ class Rectangle {
 ```
 ### ✨ Summary
 
-A class defines structure and behavior.
+>A **class** defines structure and behavior.
 
-An object is an instance of that class.
+>An **object** is an instance of that class.
 
-The constructor initializes the object.
+>The **constructor** initializes the object.
 
-The garbage collector automatically destroys it when no longer used.
+>The **garbage collector** automatically destroys it when no longer used.
 ```mermaid
 
 %%{init: {'theme': 'neutral', 'themeVariables': {
