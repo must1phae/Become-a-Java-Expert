@@ -127,3 +127,56 @@ class Rectangle {
 // Object creation
 Rectangle R1 = new Rectangle();          // Default constructor
 Rectangle R2 = new Rectangle(4.1, 7.3); // Parameterized constructor
+```
+# 🧹 Class Destructor
+
+Java does **not use destructors** like C++.  
+Memory is automatically managed by the **Garbage Collector**.
+
+You can, however, define a `finalize()` method to free resources (e.g., closing a file or database connection).
+
+### 🧮 Example
+
+```java
+class Rectangle {
+    double width;
+    double height;
+
+    public Rectangle(double w, double h) {
+        width = w;
+        height = h;
+    }
+
+    // Destructor method
+    @Override
+    protected void finalize() {
+        System.out.println("Finalizing object Rectangle: " + this);
+    }
+}
+```
+```mermaid 
+%%{init: {'theme': 'neutral', 'themeVariables': {
+  'primaryColor': '#1f6feb',
+  'edgeLabelBackground':'#ffffff',
+  'fontSize': '14px',
+  'lineColor': '#58a6ff',
+  'primaryTextColor': '#ffffff',
+  'tertiaryColor': '#161b22',
+  'background': '#0d1117'
+}}}%%
+
+flowchart TD
+    A[Class] --> B[Attributes]
+    A --> C[Methods]
+    A --> D[Constructor]
+    D -->|Creates| E[Object (Instance)]
+    E -->|Uses| B
+    E -->|Calls| C
+    E -.-> F[Garbage Collector: destroys the object when unused]
+
+    style A fill:#039be5,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style B fill:#7e57c2,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style C fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style D fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
+    style E fill:#ff7043,stroke:#58a6ff,stroke-width:1px,color:#fff
+    style F fill:#e53935,stroke:#58a6ff,stroke-width:1px,color:#fff
