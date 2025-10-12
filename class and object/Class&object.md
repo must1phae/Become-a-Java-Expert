@@ -192,3 +192,71 @@ flowchart TD
     style E fill:#ff7043,stroke:#58a6ff,stroke-width:1px,color:#fff
     style F fill:#e53935,stroke:#58a6ff,stroke-width:1px,color:#fff
 ```
+# 🚗 Car Class in Java
+
+## 📘 Class Description
+The `Car` class represents a simple vehicle with some attributes and methods:
+
+- **Attributes**: `brand`, `color`, `year`  
+- **Constructor**: Initializes the attributes  
+- **Method**: `displayInfo()` prints all car details  
+
+---
+
+## 🧮 Java Code Example
+
+```java
+class Car {
+    // Attributes
+    String brand;
+    String color;
+    int year;
+
+    // Constructor
+    public Car(String b, String c, int y) {
+        brand = b;
+        color = c;
+        year = y;
+    }
+
+    // Method
+    void displayInfo() {
+        System.out.println("🚗 Brand: " + brand);
+        System.out.println("🎨 Color: " + color);
+        System.out.println("📅 Year: " + year);
+        System.out.println("---------------------------");
+    }
+}
+
+// Main program
+public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car("Toyota", "Red", 2021);
+        Car car2 = new Car("BMW", "Black", 2023);
+
+        car1.displayInfo();
+        car2.displayInfo();
+    }
+}
+```
+```mermaid 
+%%{init: {'theme': 'neutral', 'themeVariables': {
+  'primaryColor': '#1f6feb',
+  'edgeLabelBackground':'#ffffff',
+  'fontSize': '14px',
+  'lineColor': '#58a6ff',
+  'primaryTextColor': '#ffffff',
+  'tertiaryColor': '#161b22',
+  'background': '#0d1117'
+}}}%%
+
+classDiagram
+class Car {
+    - brand : String
+    - color : String
+    - year : int
+    + Car(brand : String, color : String, year : int)
+    + displayInfo() : void
+}
+
+style Car fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#fff
