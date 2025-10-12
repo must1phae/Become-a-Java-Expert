@@ -240,7 +240,7 @@ public class Main {
 }
 ```
 ---
----
+
 ```mermaid 
 %%{init: {'theme': 'neutral', 'themeVariables': {
   'primaryColor': '#1f6feb',
