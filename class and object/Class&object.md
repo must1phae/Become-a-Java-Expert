@@ -262,3 +262,14 @@ class Car {
 }
 
 style Car fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#fff
+```
+
+## ✅ Expected Output
+🚗 Brand: Toyota
+🎨 Color: Red
+📅 Year: 2021
+---------------------------
+🚗 Brand: BMW
+🎨 Color: Black
+📅 Year: 2023
+---------------------------
