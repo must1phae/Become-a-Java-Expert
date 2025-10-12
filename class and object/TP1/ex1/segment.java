@@ -1,15 +1,21 @@
- class segment{
-    double extr1;
-    double extr2;
+    import java.util.Scanner;
+    class segment{
+     private int extr1;
+     private int extr2;
     
-    public segment(double a, double b){
-        extr1 = a;
-        extr2 = b;
+    public segment(){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("donner le  1er extremite");
+        extr1=sc.nextInt();
+        System.out.println("donner le  2eme extremite");
+        extr2=sc.nextInt();
         ordonne();
+        sc.close();
+    
     }
     public void ordonne(){
         if (extr1>extr2){
-            double t=extr1;
+            int t=extr1;
             extr1=extr2;
             extr2=t;
         }
