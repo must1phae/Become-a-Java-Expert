@@ -10,5 +10,6 @@ public class Main {
         System.out.println("Point B: " + B);
         System.out.println("Point C: " + C);
         System.out.println("Le périmètre du triangle est : " + T.perimetre());
+        T.estIsocele();
     }
 }
