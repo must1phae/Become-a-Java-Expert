@@ -76,4 +76,16 @@ style Character fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#fff
 style Warrior fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
 style Magician fill:#7e57c2,stroke:#58a6ff,stroke-width:1px,color:#fff
 style Thief fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff
+```
 
+### 💡 Explanation
+
+**In this UML diagram:**
+
+Character is the base class (superclass).
+
+Warrior, Magician, and Thief are subclasses that inherit from Character.
+
+Each subclass can have its own methods, but also share the common behaviors defined in the superclass.
+
+This is how Java Inheritance allows you to create a hierarchy of classes with shared logic and specialized behavior.
