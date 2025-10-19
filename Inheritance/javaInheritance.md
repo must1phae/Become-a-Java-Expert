@@ -96,6 +96,7 @@ This is how Java Inheritance allows you to create a hierarchy of classes with sh
 ✅ *Reduces redundancy*
 ✅ *Enables polymorphism*
 ✅ *Improves maintainability*
+
 ## ⚙️ Section 2 – Method Overriding in Java
 
 ### 🧠 Concept
@@ -104,6 +105,7 @@ This is how Java Inheritance allows you to create a hierarchy of classes with sh
 This allows the subclass to **customize or extend** the behavior inherited from the superclass.
 
 ✅ **Rules of Overriding**:
+
 - The method must have the **same name**, **return type**, and **parameters**.
 - It must be defined **inside a subclass**.
 - The method in the parent class must **not be `final` or `static`**.
