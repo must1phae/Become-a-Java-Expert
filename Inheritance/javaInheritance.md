@@ -88,4 +88,4 @@ Warrior, Magician, and Thief are subclasses that inherit from Character.
 
 Each subclass can have its own methods, but also share the common behaviors defined in the superclass.
 
-This is how Java Inheritance allows you to create a hierarchy of classes with shared logic and specialized behavior.
+This is how Java Inheritance allows you to create a hierarchy of classes with shared logic and specialized behavior .
