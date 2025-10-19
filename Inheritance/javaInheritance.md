@@ -39,20 +39,41 @@ public class Main {
 
 ```mermaid
 %%{init: {'theme': 'neutral', 'themeVariables': {
-'primaryColor': '#1f6feb',
-'edgeLabelBackground':'#ffffff',
-'fontSize': '14px',
-'lineColor': '#58a6ff',
-'primaryTextColor': '#ffffff',
-'tertiaryColor': '#161b22',
-'background': '#0d1117'
+  'primaryColor': '#1f6feb',
+  'edgeLabelBackground':'#ffffff',
+  'fontSize': '14px',
+  'lineColor': '#58a6ff',
+  'primaryTextColor': '#ffffff',
+  'tertiaryColor': '#161b22',
+  'background': '#0d1117'
 }}}%%
 
 classDiagram
-java
 class Character {
-- name : String
-- health : int
-+ attack() : void
-+ defend() : void
+    - name : String
+    - health : int
+    + attack() : void
+    + defend() : void
 }
+
+class Warrior {
+    + useSword() : void
+}
+
+class Magician {
+    + castSpell() : void
+}
+
+class Thief {
+    + steal() : void
+}
+
+Character <|-- Warrior
+Character <|-- Magician
+Character <|-- Thief
+
+style Character fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#fff
+style Warrior fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
+style Magician fill:#7e57c2,stroke:#58a6ff,stroke-width:1px,color:#fff
+style Thief fill:#43a047,stroke:#58a6ff,stroke-width:1px,color:#fff
+
