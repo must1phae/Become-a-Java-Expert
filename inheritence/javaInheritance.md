@@ -142,4 +142,47 @@ note for Warrior "Overrides attack() with sword behavior"
 
 style Character fill:#161b22,stroke:#58a6ff,stroke-width:1px,color:#fff
 style Warrior fill:#f9a825,stroke:#58a6ff,stroke-width:1px,color:#000
+```
 
+## ⚙️ Method Overriding in Java
+
+**Method Overriding** occurs when a subclass provides a specific implementation of a method that is already defined in its parent class.  
+It allows a subclass to modify or extend the behavior of an inherited method.
+
+✅ **Key Points:**
+
+- The method in the child class must have the same name, return type, and parameters as in the parent class.  
+- The `@Override` annotation is used to indicate that the method is being overridden.  
+- It helps achieve **runtime polymorphism**.
+
+---
+
+### 💻 Example Code
+
+```java
+// Parent class
+class Character {
+    void attack() {
+        System.out.println("The character attacks!");
+    }
+}
+
+// Child class that overrides the method
+class Warrior extends Character {
+    @Override
+    void attack() {
+        System.out.println("The warrior attacks with a sword!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Character c = new Character();
+        c.attack(); 
+        // Output: The character attacks!
+
+        Warrior w = new Warrior();
+        w.attack(); 
+        // Output: The warrior attacks with a sword!
+    }
+}
