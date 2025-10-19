@@ -32,4 +32,26 @@ public class Main {
         obj.display(); // Inherited from Parent
         obj.show();    // Defined in Child
     }
+}
+```
+
+## ⚙️ UML Diagram – Character Inheritance Example
+
+%%{init: {'theme': 'neutral', 'themeVariables': {
+'primaryColor': '#1f6feb',
+'edgeLabelBackground':'#ffffff',
+'fontSize': '14px',
+'lineColor': '#58a6ff',
+'primaryTextColor': '#ffffff',
+'tertiaryColor': '#161b22',
+'background': '#0d1117'
+}}}%%
+
+classDiagram
+```java
+class Character {
+- name : String
+- health : int
++ attack() : void
++ defend() : void
 }```
