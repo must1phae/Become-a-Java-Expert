@@ -37,6 +37,7 @@ public class Main {
 
 ## ⚙️ UML Diagram – Character Inheritance Example
 
+```mermaid
 %%{init: {'theme': 'neutral', 'themeVariables': {
 'primaryColor': '#1f6feb',
 'edgeLabelBackground':'#ffffff',
@@ -48,10 +49,10 @@ public class Main {
 }}}%%
 
 classDiagram
-```java
+java
 class Character {
 - name : String
 - health : int
 + attack() : void
 + defend() : void
-}```
+}
