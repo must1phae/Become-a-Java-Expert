@@ -1,4 +1,3 @@
-package ex1;
 class employe{
     protected String nom;
     protected String prenom;
