@@ -1,4 +1,5 @@
 package ex1;
+
 public class Main {
     public static void main(String[] args) {
         employe e1 = new employe("Doe", "John", 3000);
