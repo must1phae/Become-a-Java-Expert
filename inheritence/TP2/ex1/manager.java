@@ -1,3 +1,4 @@
+package ex1;
 public class manager extends employe {
     private double prime; 
     public manager(String nom, String prenom , double salaire, double prime){
