@@ -17,7 +17,8 @@ public class staff extends persone {
     @Override
     public void afficher() {
         super.afficher();
-        System.out.println(getNomLabo()+" "+getSalaire());
+        System.out.println(getNomLabo());
+        System.out.println(getSalaire());
     }
 
     

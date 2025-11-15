@@ -3,6 +3,7 @@ public class enseignant extends staff{
     public enseignant(String nom, int annee, String nomLabo, double salaire, String nomSection){
         super(nom,annee,nomLabo,salaire);
         this.nomSection = nomSection;
+        System.out.println("Enseignant :");
 
     }
     @Override
