@@ -123,4 +123,3 @@ public abstract class Personne {
 Cet exercice illustre efficacement l'héritage, la réutilisation de code et l'usage de membres statiques pour des statistiques globales. Avec quelques améliorations structurelles et de style, il peut servir de base à un mini-modèle orienté objet propre et extensible.
 
 ---
-Rapport généré automatiquement.
