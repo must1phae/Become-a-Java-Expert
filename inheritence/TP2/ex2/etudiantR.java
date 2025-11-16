@@ -14,8 +14,8 @@ public class etudiantR extends ET {
     @Override
     public void afficher() {
         super.afficher();
-        System.out.println(getSection());
-        System.out.println(getMoyenne());
+        System.out.println("section: "+getSection());
+        System.out.println("moyenne: "+getMoyenne());
 
     }
     

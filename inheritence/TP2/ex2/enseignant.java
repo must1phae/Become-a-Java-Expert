@@ -9,11 +9,11 @@ public class enseignant extends staff{
     @Override
     public void afficher(){
         super.afficher();
-        System.out.println(nomSection);
+        System.out.println("nom de section: "+nomSection);
 
     }
     public void afficher1(){
-        System.out.println(nomSection);
+        System.out.println("nom de section: "+nomSection);
     }
     
     

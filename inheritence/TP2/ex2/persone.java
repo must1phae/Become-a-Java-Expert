@@ -18,7 +18,7 @@ public class persone {
         return annee;
     }
     public void afficher(){
-        System.out.println(getNom());
-        System.out.println(getAnnee());
+        System.out.println("nom: "+getNom());
+        System.out.println("annee: "+getAnnee());
     }
 }
