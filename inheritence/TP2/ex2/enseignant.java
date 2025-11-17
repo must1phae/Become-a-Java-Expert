@@ -12,9 +12,7 @@ public class enseignant extends staff{
         System.out.println("nom de section: "+nomSection);
 
     }
-    public void afficher1(){
-        System.out.println("nom de section: "+nomSection);
-    }
-    
+
+       
     
 }
