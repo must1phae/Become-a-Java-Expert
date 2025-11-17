@@ -6,6 +6,7 @@ public class voiture  extends vehicule {
     public voiture(String marque, int annee, int nombreportes){
         super(marque, annee);
         this.nombreportes=nombreportes;
+        System.out.println("Voiture :");
 
     }
     @Override

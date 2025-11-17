@@ -4,6 +4,7 @@ public class moto extends vehicule {
     public moto(String marque, int annee, String typeguidon ){
         super(marque,annee);
         this.typeguidon=typeguidon;
+        System.out.println("Moto :");
     }
     @Override
     public void demmarer(){

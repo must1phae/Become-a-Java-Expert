@@ -15,7 +15,7 @@ public class vehicule  {
 
         }
     public void afficherInfo(){
-        System.out.println("marque :"+marque+"annee de fabrication :"+annee);
+        System.out.println("marque : "+marque+" annee de fabrication :"+annee);
     }
     
     

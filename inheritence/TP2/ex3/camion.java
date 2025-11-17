@@ -6,7 +6,7 @@ public class camion extends vehicule{
     public camion(String marque, int annee, double capacitecharge){
         super(marque, annee);
         this.capacitecharge=capacitecharge;
-
+        System.out.println("Camion :");
     }
     @Override
     public void demmarer(){
