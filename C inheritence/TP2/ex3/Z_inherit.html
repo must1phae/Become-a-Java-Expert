@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Héritage & Polymorphisme – Parc de Véhicules</title>
+  <style>
+    :root { --fg:#1f2937; --bg:#ffffff; --muted:#6b7280; --accent:#2563eb; }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
+    main{max-width:900px;margin:32px auto;padding:0 20px}
+    h1{font-size:2rem;margin:0 0 0.75rem}
+    h2{font-size:1.5rem;margin:2rem 0 0.75rem}
+    h3{font-size:1.15rem;margin:1.25rem 0 0.5rem;color:var(--accent)}
+    p{margin:0.5rem 0}
+    ul{margin:0.5rem 0 0.75rem 1.25rem}
+    code,pre{background:#0f172a0d;border:1px solid #0f172a1a;border-radius:6px}
+    code{padding:0.15em 0.35em}
+    pre{padding:12px;overflow:auto}
+    pre code{border:none;background:transparent;padding:0}
+    blockquote{margin:0.75rem 0;padding:0.5rem 0.75rem;border-left:4px solid #e5e7eb;background:#f9fafb}
+    table{width:100%;border-collapse:collapse;margin:0.5rem 0 1rem}
+    th,td{border:1px solid #e5e7eb;padding:8px 10px;text-align:left}
+    th{background:#f3f4f6}
+    .muted{color:var(--muted)}
+    hr{border:none;border-top:1px solid #e5e7eb;margin:1.5rem 0}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    @media print{
+      body{color:#000}
+      a::after{content:" (" attr(href) ")";font-size:0.9em}
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>🚗✨ Héritage & Polymorphisme – Gestion d’un Parc de Véhicules</h1>
+
+  <h2>🎯 Objectif de l’exercice</h2>
+  <p>Cet exercice vise à pratiquer :</p>
+  <ul>
+    <li>🧬 Héritage</li>
+    <li>🔁 Polymorphisme (override)</li>
+    <li>🏷 Classes abstraites</li>
+    <li>🧮 Compteurs statiques</li>
+    <li>📦 Manipulation d’objets via des références du type parent</li>
+  </ul>
+  <p>But : modéliser un parc de véhicules et utiliser le polymorphisme pour des comportements de démarrage spécifiques selon le type réel.</p>
+
+  <h2>🏛️ Hiérarchie des classes</h2>
+  <pre class="mono"><code>Vehicule (abstract)
+ ├── Voiture
+ ├── Moto
+ └── Camion</code></pre>
+
+  <h2>📋 Tableau récapitulatif</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Classe</th>
+        <th>Hérite de</th>
+        <th>Attributs clés</th>
+        <th>Méthodes redéfinies</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vehicule</td>
+        <td>—</td>
+        <td><code>marque</code>, <code>annee</code>, <code>nombreVehicules</code></td>
+        <td><code>demarrer()</code> (abstraite), <code>afficherInfo()</code></td>
+      </tr>
+      <tr>
+        <td>Voiture</td>
+        <td>Vehicule</td>
+        <td><code>nombrePortes</code></td>
+        <td><code>demarrer()</code></td>
+      </tr>
+      <tr>
+        <td>Moto</td>
+        <td>Vehicule</td>
+        <td><code>typeGuidon</code></td>
+        <td><code>demarrer()</code></td>
+      </tr>
+      <tr>
+        <td>Camion</td>
+        <td>Vehicule</td>
+        <td><code>capaciteCharge</code> (tonnes)</td>
+        <td><code>demarrer()</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🚘 Vehicule (Classe abstraite)</h2>
+  <p class="muted">Classe de base pour tous les véhicules.</p>
+  <h3>Attributs – Classe de base</h3>
+  <ul>
+    <li>🏷 <code>marque</code></li>
+    <li>📅 <code>annee</code></li>
+    <li>🔢 <code>nombreVehicules</code> (compteur statique)</li>
+  </ul>
+  <h3>Méthodes – Classe de base</h3>
+  <ul>
+    <li>🔧 <code>afficherInfo()</code> — affiche les informations communes</li>
+    <li>🏁 <code>demarrer()</code> — abstraite, redéfinie dans les sous-classes</li>
+  </ul>
+
+  <h2>🚗 Voiture (extends Vehicule)</h2>
+  <h3>Attribut – Voiture</h3>
+  <ul>
+    <li>🚪 <code>nombrePortes</code></li>
+  </ul>
+  <h3>Redéfinition – Voiture</h3>
+  <blockquote>La voiture démarre avec un moteur essence.</blockquote>
+
+  <h2>🏍 Moto (extends Vehicule)</h2>
+  <h3>Attribut – Moto</h3>
+  <ul>
+    <li>🕹 <code>typeGuidon</code></li>
+  </ul>
+  <h3>Redéfinition – Moto</h3>
+  <blockquote>La moto démarre en tournant la poignée.</blockquote>
+
+  <h2>🚚 Camion (extends Vehicule)</h2>
+  <h3>Attribut – Camion</h3>
+  <ul>
+    <li>⚖️ <code>capaciteCharge</code> (en tonnes)</li>
+  </ul>
+  <h3>Redéfinition – Camion</h3>
+  <blockquote>Le camion démarre avec un moteur diesel puissant.</blockquote>
+
+  <h2>🧠 Polymorphisme (Overriding)</h2>
+  <p>Grâce à des références de type <code>Vehicule</code>, on manipule des objets différents :</p>
+  <pre><code class="language-java">Vehicule v = new Camion(...);
+v.demarrer(); // Exécute la version spécifique au camion</code></pre>
+  <p>➡️ La méthode appelée dépend du type réel de l’objet. C’est le polymorphisme d’exécution.</p>
+
+  <h2>🔢 Compteur de véhicules</h2>
+  <p>À chaque instanciation d’un véhicule :</p>
+  <pre><code class="language-java">nombreVehicules++;</code></pre>
+  <p>Ce compteur donne le nombre total d’objets créés.</p>
+
+  <h2>🖥️ Exemple d’exécution</h2>
+  <pre class="mono"><code>--- Informations véhicules ---
+Voiture : Toyota (2018), 4 portes
+La voiture démarre avec un moteur essence.
+
+Moto : Honda (2022), guidon sport
+La moto démarre en tournant la poignée.
+
+Camion : Volvo (2015), charge 12.0 tonnes
+Le camion démarre avec un moteur diesel puissant.
+
+Nombre total de véhicules : 3</code></pre>
+
+  <h2>⭐ Points forts pédagogiques</h2>
+  <ul>
+    <li>🎨 Hiérarchie claire et extensible</li>
+    <li>🎭 Polymorphisme parfaitement illustré</li>
+    <li>🔢 Utilisation de compteurs statiques</li>
+    <li>🧱 Classe abstraite bien utilisée</li>
+    <li>🔁 Code réutilisable et évolutif</li>
+  </ul>
+
+  <h2>🚀 Améliorations possibles</h2>
+  <ul>
+    <li>Ajouter <code>Garage</code> avec <code>ArrayList&lt;Vehicule&gt;</code></li>
+    <li>Ajouter une interface <code>Reparable</code></li>
+    <li>Ajouter une méthode polymorphique <code>calculerTaxe()</code></li>
+    <li>Valider les données (année, charge, etc.)</li>
+    <li>Utiliser un logger au lieu de <code>System.out.println</code> pour les projets avancés</li>
+  </ul>
+
+  <h2>🧩 Exemple de refactorisation (version plus propre)</h2>
+  <pre><code class="language-java">public abstract class Vehicule {
+    private String marque;
+    private int annee;
+    private static int compteur;
+
+    public Vehicule(String marque, int annee) {
+        this.marque = marque;
+        this.annee = annee;
+        compteur++;
+    }
+
+    public static int getCompteur() {
+        return compteur;
+    }
+
+    public void afficherInfo() {
+        System.out.println(marque + " (" + annee + ")");
+    }
+
+    public abstract void demarrer();
+}
+</code></pre>
+
+  <h2>🏁 Conclusion</h2>
+  <p>Cet exercice combine :</p>
+  <ul>
+    <li>Héritage</li>
+    <li>Polymorphisme</li>
+    <li>Abstraction</li>
+    <li>Compteurs statiques</li>
+  </ul>
+  <p>…tout en restant très proche de situations réelles.</p>
+</main>
+</body>
+</html>
